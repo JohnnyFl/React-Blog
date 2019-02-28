@@ -92,8 +92,8 @@ class AddArticle extends Component {
             onChange={this.onInputChange}
             value={category}
           >
-            {categories.map(category => (
-              <option value={`${category}`}>{category}</option>
+            {categories.map((category,index) => (
+              <option key={index} value={`${category}`}>{category}</option>
             ))}
           </select>
         </label>
