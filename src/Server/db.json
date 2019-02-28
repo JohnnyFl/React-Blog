@@ -1,0 +1,166 @@
+{
+  "articles": [
+    {
+      "image": "https://images.unsplash.com/photo-1549921296-bc643ead1e65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80",
+      "title": "First article",
+      "body": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.",
+      "author": "Josh M.",
+      "postDate": "02/23/2019",
+      "category": "Technics",
+      "id": 1
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80",
+      "title": "Third article",
+      "body": " I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.",
+      "author": "Jessica P.",
+      "postDate": "05/29/2019",
+      "category": "Food",
+      "id": 3
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550790298-ccd4c7dc071a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80",
+      "title": "Fghj",
+      "body": "Go Go Go",
+      "author": "rgthyjh",
+      "postDate": "02/26/2019",
+      "category": "Food",
+      "id": 5
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550874296-8c8769b8ebef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80",
+      "title": "Girl",
+      "body": "Girl",
+      "author": "Me",
+      "postDate": "02/23/2019",
+      "category": "Travel",
+      "id": 6
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550870295-1b1e98a0d53f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1875&q=80",
+      "title": "Car",
+      "body": "Nice Car",
+      "author": "Me",
+      "postDate": "02/26/2019",
+      "category": "Technics",
+      "id": 7
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550837659-aafc79fba9c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80",
+      "title": "Signs",
+      "body": "blah blah",
+      "author": "Me",
+      "postDate": "02/23/2019",
+      "category": "Travel",
+      "id": 8
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550553484-c46651e02af6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1838&q=80",
+      "title": "Test",
+      "body": "Hi!",
+      "author": "Me",
+      "postDate": "02/23/2019",
+      "category": "Travel",
+      "id": 9
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1477973770766-6228305816df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80",
+      "title": "RJ",
+      "body": "jsjdka;dfs",
+      "author": "ME",
+      "postDate": "02/23/2019",
+      "category": "Travel",
+      "id": 10
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1543171165-6ec6ede147ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1852&q=80",
+      "title": "RGHTFY",
+      "body": "RHDTf",
+      "author": "ME",
+      "postDate": "02/25/2019",
+      "category": "Technics",
+      "id": 11
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550951428-ed00ffc028d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1601&q=80",
+      "title": "DF",
+      "body": "Rthdfhg",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Travel",
+      "id": 12
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      "title": "Dghg",
+      "body": "ergthy",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Food",
+      "id": 13
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1490731727228-d56f39758d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      "title": "DFsdt",
+      "body": "erty",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Food",
+      "id": 14
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1495480137269-ff29bd0a695c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80",
+      "title": "rtyu",
+      "body": "rtryu",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Food",
+      "id": 15
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1501959915551-4e8d30928317?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80",
+      "title": "SGrthy",
+      "body": "ertyu",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Food",
+      "id": 16
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1550666253-d6649814e4bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+      "title": "Egrdhty",
+      "body": "rtyu",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Technics",
+      "id": 17
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1499244571948-7ccddb3583f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80",
+      "title": "ergty",
+      "body": "erty",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Technics",
+      "id": 18
+    },
+    {
+      "image": "https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "title": "DFfd",
+      "body": "asdfsfd",
+      "author": "Me",
+      "postDate": "02/25/2019",
+      "category": "Food",
+      "id": 19
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1424591093900-514bab956faf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+      "title": "AFddgfh",
+      "body": "34t5yr6tu",
+      "author": "Me",
+      "postDate": "02/26/2019",
+      "category": "Food",
+      "id": 20
+    }
+  ]
+}
