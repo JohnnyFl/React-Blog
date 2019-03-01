@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Header from "./Components/Header";
 import Sidenav from "./Components/Sidenav/index";
 import Main from "./Components/Main/index";
@@ -14,10 +13,7 @@ const mapDispatchToProps = {
 class App extends Component {
   componentDidMount = () => {
     const { loadArticles } = this.props;
-    axios
-      .get("http://localhost:3004/articles")
-      .then(res => loadArticles(res.data))
-      .catch(err => console.log(err));
+    loadArticles();
   };
   render() {
     return (

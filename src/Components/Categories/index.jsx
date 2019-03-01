@@ -5,7 +5,7 @@ import "./index.sass";
 
 const mapStateToProps = state => {
   return {
-    categories: state.categories
+    categories: state.categoryReducer.categories
   };
 };
 

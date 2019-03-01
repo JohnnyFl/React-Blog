@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import arraySort from "array-sort";
 import { deleteArticle, getId, getText } from "./actions";
 import { connect } from "react-redux";
@@ -56,16 +55,8 @@ class Articles extends Component {
     return null;
   };
 
-  removeArticle = id => {
-    const { deleteArticle } = this.props;
-    axios
-      .delete(`http://localhost:3004/articles/${id}`)
-      .then(() => deleteArticle(id))
-      .catch(err => console.log(err));
-  };
-
   render() {
-    const { articles, getId, getText } = this.props;
+    const { articles, getId, getText, deleteArticle } = this.props;
     const { data } = this.state;
     return (
       <div>
@@ -87,7 +78,7 @@ class Articles extends Component {
                 <p>{article.body}</p>
               </div>
               <div className="actions">
-                <button onClick={() => this.removeArticle(article.id)}>
+                <button onClick={() => deleteArticle(article.id)}>
                   Remove
                 </button>
                 <Link to={`post/:${article.id}`}>

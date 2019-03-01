@@ -2,7 +2,6 @@ import React from "react";
 import AddArticle from "../AddArticle";
 import Home from "../Home/index";
 import OpenArticle from "../OpenArticle/index";
-import axios from "axios";
 import Categories from "../Categories/index";
 import { Switch, Route } from "react-router-dom";
 import { addArticle, updateArticle } from "./actions";
@@ -13,9 +12,9 @@ import "./index.sass";
 
 const mapStateToProps = state => {
   return {
-    articles: state.articles,
-    id: state.id,
-    text: state.text
+    articles: state.articleReducer.articles,
+    id: state.addEditArticleReducer.id,
+    text: state.addEditArticleReducer.text
   };
 };
 
@@ -54,34 +53,6 @@ const Main = props => {
     category: ""
   };
 
-  const postMethod = (image, title, body, author, postDate, category) => {
-    axios
-      .post("http://localhost:3004/articles", {
-        image,
-        title,
-        body,
-        author,
-        postDate,
-        category
-      })
-      .then(res => addArticle(res.data))
-      .catch(err => console.log(err));
-  };
-
-  const putMethod = (image, title, body, author, postDate, category, id) => {
-    axios
-      .put(`http://localhost:3004/articles/${id}`, {
-        image,
-        title,
-        body,
-        author,
-        postDate,
-        category
-      })
-      .then(res => updateArticle(res.data))
-      .catch(err => console.log(err));
-  };
-
   return (
     <main className="main">
       <Switch>
@@ -102,7 +73,7 @@ const Main = props => {
           path="/post/new"
           render={() => (
             <AddArticle
-              method={postMethod}
+              method={addArticle}
               article={empty}
               editorState={EditorState.createEmpty()}
               buttonName="Add Article"
@@ -113,7 +84,7 @@ const Main = props => {
           path="/post/:id"
           render={() => (
             <AddArticle
-              method={putMethod}
+              method={updateArticle}
               article={article[0]}
               editorState={EditorState.createWithContent(
                 ContentState.createFromText(text)

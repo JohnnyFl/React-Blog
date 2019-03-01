@@ -19,20 +19,11 @@
       "id": 3
     },
     {
-      "image": "https://images.unsplash.com/photo-1550790298-ccd4c7dc071a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80",
-      "title": "Fghj",
-      "body": "Go Go Go",
-      "author": "rgthyjh",
-      "postDate": "02/26/2019",
-      "category": "Food",
-      "id": 5
-    },
-    {
       "image": "https://images.unsplash.com/photo-1550874296-8c8769b8ebef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1834&q=80",
       "title": "Girl",
-      "body": "Girl",
+      "body": "Girl GO GO",
       "author": "Me",
-      "postDate": "02/23/2019",
+      "postDate": "03/01/2019",
       "category": "Travel",
       "id": 6
     },
@@ -161,15 +152,6 @@
       "postDate": "02/26/2019",
       "category": "Food",
       "id": 20
-    },
-    {
-      "image": "",
-      "title": " asdffdgf",
-      "body": "",
-      "author": "Me",
-      "postDate": "02/28/2019",
-      "category": "Food",
-      "id": 21
     }
   ]
 }

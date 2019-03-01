@@ -1,21 +1,16 @@
 import React, { Component } from "react";
 import moment from "moment";
 import RichEditor from "../TextArea/index";
-import { addArticle, updateArticle } from "./actions";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
-    body: state.body,
-    id: state.id,
-    categories: state.categories
+    body: state.addEditArticleReducer.body,
+    id: state.addEditArticleReducer.id,
+    categories: state.categoryReducer.categories
   };
-};
-
-const mapDispatchToProps = {
-  addArticle,
-  updateArticle
 };
 
 class AddArticle extends Component {
@@ -92,8 +87,10 @@ class AddArticle extends Component {
             onChange={this.onInputChange}
             value={category}
           >
-            {categories.map((category,index) => (
-              <option key={index} value={`${category}`}>{category}</option>
+            {categories.map((category, index) => (
+              <option key={index} value={`${category}`}>
+                {category}
+              </option>
             ))}
           </select>
         </label>
@@ -111,7 +108,4 @@ class AddArticle extends Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AddArticle);
+export default connect(mapStateToProps)(AddArticle);

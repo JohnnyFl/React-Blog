@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import "./index.sass";
 
 const mapStateToProps = state => {
+  console.log(state)
   return {
-    categories: state.categories
+    categories: state.categoryReducer.categories
   };
 };
 
