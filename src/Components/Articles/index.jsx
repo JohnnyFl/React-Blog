@@ -23,25 +23,33 @@ class Articles extends Component {
   sort = (articles, option) => {
     const { isNewestFirst, isSortByAsc } = this.state;
     if (!isNewestFirst) {
-      this.setState({
-        data: arraySort(articles, option),
-        isNewestFirst: !isNewestFirst
+      this.setState(({ isNewestFirst }) => {
+        return {
+          data: arraySort(articles, option),
+          isNewestFirst: !isNewestFirst
+        };
       });
     } else if (isNewestFirst) {
-      this.setState({
-        data: arraySort(articles, option, { reverse: true }),
-        isNewestFirst: !isNewestFirst
+      this.setState(({ isNewestFirst }) => {
+        return {
+          data: arraySort(articles, option, { reverse: true }),
+          isNewestFirst: !isNewestFirst
+        };
       });
     }
     if (!isSortByAsc) {
-      this.setState({
-        data: arraySort(articles, option),
-        isSortByAsc: !isSortByAsc
+      this.setState(({ isSortByAsc }) => {
+        return {
+          data: arraySort(articles, option),
+          isSortByAsc: !isSortByAsc
+        };
       });
     } else if (isSortByAsc) {
-      this.setState({
-        data: arraySort(articles, option, { reverse: true }),
-        isSortByAsc: !isSortByAsc
+      this.setState(({ isSortByAsc }) => {
+        return {
+          data: arraySort(articles, option, { reverse: true }),
+          isSortByAsc: !isSortByAsc
+        };
       });
     }
   };

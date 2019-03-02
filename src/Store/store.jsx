@@ -1,4 +1,3 @@
-// import reducer from "../Components/Articles/reducer";
 import reducer from '../reducer'
 import ReduxThunk from "redux-thunk";
 import { createStore, applyMiddleware } from "redux";

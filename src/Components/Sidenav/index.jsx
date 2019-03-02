@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./index.sass";
 
-const mapStateToProps = state => {
-  console.log(state)
+const mapStateToProps = ({ categoryReducer }) => {
   return {
-    categories: state.categoryReducer.categories
+    categories: categoryReducer.categories
   };
 };
 

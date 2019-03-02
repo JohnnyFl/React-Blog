@@ -4,29 +4,23 @@ import RichEditor from "../TextArea/index";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-const mapStateToProps = state => {
-  console.log(state);
+const mapStateToProps = ({ addEditArticleReducer, categoryReducer }) => {
   return {
-    body: state.addEditArticleReducer.body,
-    id: state.addEditArticleReducer.id,
-    categories: state.categoryReducer.categories
+    body: addEditArticleReducer.body,
+    id: addEditArticleReducer.id,
+    categories: categoryReducer.categories
   };
 };
 
 class AddArticle extends Component {
-  constructor(props) {
-    super(props);
-    const { title, author, image, body, category } = this.props.article;
-
-    this.state = {
-      title: title,
-      author: author,
-      image: image,
-      body: body,
-      postDate: moment().format("L"),
-      category: category
-    };
-  }
+  state = {
+    title: this.props.title,
+    author: this.props.author,
+    image: this.props.image,
+    body: this.props.body,
+    postDate: moment().format("L"),
+    category: this.props.category
+  };
 
   onInputChange = event => {
     const target = event.target;

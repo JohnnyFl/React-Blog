@@ -3,9 +3,9 @@ import { addCategory, updateCategory, deleteCategory } from "./actions";
 import { connect } from "react-redux";
 import "./index.sass";
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ categoryReducer}) => {
   return {
-    categories: state.categoryReducer.categories
+    categories: categoryReducer.categories
   };
 };
 

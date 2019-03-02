@@ -10,11 +10,11 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import "./index.sass";
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ articleReducer, addEditArticleReducer }) => {
   return {
-    articles: state.articleReducer.articles,
-    id: state.addEditArticleReducer.id,
-    text: state.addEditArticleReducer.text
+    articles: articleReducer.articles,
+    id: addEditArticleReducer.id,
+    text: addEditArticleReducer.text
   };
 };
 
