@@ -1,20 +1,18 @@
 import React from "react";
-import AddArticle from "../AddArticle";
-import Home from "../Home/index";
-import OpenArticle from "../OpenArticle/index";
-import Categories from "../Categories/index";
-import { Switch, Route } from "react-router-dom";
-import { addArticle, updateArticle } from "./actions";
-import { EditorState, ContentState } from "draft-js";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { addArticle, updateArticle } from "../../Actions/articlesActions";
+import Routes from "../Routes/index";
 import "./index.sass";
 
-const mapStateToProps = ({ articleReducer, addEditArticleReducer }) => {
+const mapStateToProps = ({
+  articles: { articles, searchField },
+  categories: { categories }
+}) => {
   return {
-    articles: articleReducer.articles,
-    id: addEditArticleReducer.id,
-    text: addEditArticleReducer.text
+    articles,
+    categories,
+    searchField
   };
 };
 
@@ -24,79 +22,46 @@ const mapDispatchToProps = {
 };
 
 const Main = props => {
-  const { articles, id, text, addArticle, updateArticle } = props;
+  const {
+    articles,
+    addArticle,
+    updateArticle,
+    searchField,
+    categories
+  } = props;
 
-  const article = articles.filter(article => {
-    return article.id === id;
-  });
-
-  //Make improvements
-
-  const Technics = articles.filter(article => {
-    return article.category === "Technics";
-  });
-
-  const Food = articles.filter(article => {
-    return article.category === "Food";
-  });
-
-  const Travel = articles.filter(article => {
-    return article.category === "Travel";
-  });
-
-  const empty = {
-    image: "",
-    title: " ",
-    body: "",
-    author: "",
-    postDate: "",
-    category: ""
+  const returnedArticles = name => {
+    const returnedArticles = articles.filter(
+      article => article.category === name
+    );
+    return returnedArticles;
   };
 
-  return (
-    <main className="main">
-      <Switch>
-        <Route
-          exact
-          path="/posts"
-          render={() => <Home articles={articles} />}
-        />
-        <Route
-          path="/posts/:id"
-          render={() => <OpenArticle article={article[0]} />}
-        />
-        <Route path="/technics" render={() => <Home articles={Technics} />} />
-        <Route path="/food" render={() => <Home articles={Food} />} />
-        <Route path="/travel" render={() => <Home articles={Travel} />} />
-        <Route
-          exact
-          path="/post/new"
-          render={() => (
-            <AddArticle
-              method={addArticle}
-              article={empty}
-              editorState={EditorState.createEmpty()}
-              buttonName="Add Article"
-            />
-          )}
-        />
-        <Route
-          path="/post/:id"
-          render={() => (
-            <AddArticle
-              method={updateArticle}
-              article={article[0]}
-              editorState={EditorState.createWithContent(
-                ContentState.createFromText(text)
-              )}
-              buttonName="Edit Article"
-            />
-          )}
-        />
-        <Route path="/categories" render={() => <Categories />} />
-      </Switch>
-    </main>
-  );
+  const filteredArticles = articles => {
+    const filteredArticles = articles.filter(article => {
+      if (searchField === "") {
+        return articles;
+      } else {
+        return article.title.toLowerCase().includes(searchField.toLowerCase());
+      }
+    });
+    return filteredArticles;
+  };
+
+  if (articles.length !== 0 && categories.length !== 0) {
+    return (
+      <Routes
+        articles={articles}
+        filteredArticles={filteredArticles}
+        returnedArticles={returnedArticles}
+        addArticle={addArticle}
+        updateArticle={updateArticle}
+        categories={categories}
+      />
+    );
+  } else {
+    return null;
+  }
 };
 
 export default withRouter(

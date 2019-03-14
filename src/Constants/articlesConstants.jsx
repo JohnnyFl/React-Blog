@@ -1,0 +1,7 @@
+export const LOAD_ARTICLES = "LOAD_ARTICLES";
+export const ADD_ARTICLE = "ADD_ARTICLE";
+export const UPDATE_ARTICLE = "UPDATE_ARTICLE";
+export const DELETE_ARTICLE = "DELETE_ARTICLE";
+export const ADD_PREVIEW_TEXT = "ADD_PREVIEW_TEXT";
+export const ADD_POST_TEXT = "ADD_POST_TEXT";
+export const SEARCH_FIELD = "SEARCH_FIELD";

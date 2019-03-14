@@ -1,12 +1,18 @@
 import React from "react";
-import { Editor, RichUtils, getDefaultKeyBinding } from "draft-js";
-import { addText } from "./actions";
+import {
+  Editor,
+  RichUtils,
+  getDefaultKeyBinding,
+  convertToRaw
+} from "draft-js";
+import { addPreviewText, addPostText } from "../../Actions/articlesActions";
 import { connect } from "react-redux";
 import "./RichEditor.css";
 import "./Draft.css";
 
 const mapDispatchToProps = {
-  addText
+  addPreviewText,
+  addPostText
 };
 
 class RichEditorExample extends React.Component {
@@ -15,9 +21,10 @@ class RichEditorExample extends React.Component {
     this.state = { editorState: this.props.editorState };
     this.focus = () => this.refs.editor.focus();
     this.onChange = editorState => {
-      let contentState = editorState.getCurrentContent();
+      const contentState = editorState.getCurrentContent();
       this.setState({ editorState });
-      this.props.addText(contentState.getPlainText());
+      this.props.addPreviewText(contentState.getPlainText());
+      this.props.addPostText(convertToRaw(contentState));
     };
     this.handleKeyCommand = this._handleKeyCommand.bind(this);
     this.mapKeyToEditorCommand = this._mapKeyToEditorCommand.bind(this);

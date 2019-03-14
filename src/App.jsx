@@ -1,25 +1,26 @@
 import React, { Component } from "react";
-import Header from "./Components/Header";
-import Sidenav from "./Components/Sidenav/index";
-import Main from "./Components/Main/index";
-import { loadArticles } from "./actions";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { loadCategories } from "./Actions/categoryActions";
+import { loadArticles } from "./Actions/articlesActions";
+import Main from "./Components/Main/index";
+import Header from "./Components/Header";
 
 const mapDispatchToProps = {
-  loadArticles
+  loadArticles,
+  loadCategories
 };
 
 class App extends Component {
   componentDidMount = () => {
-    const { loadArticles } = this.props;
+    const { loadArticles, loadCategories } = this.props;
     loadArticles();
+    loadCategories();
   };
   render() {
     return (
       <div>
         <Header />
-        <Sidenav />
         <Main />
       </div>
     );

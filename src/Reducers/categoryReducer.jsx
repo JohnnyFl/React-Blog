@@ -1,25 +1,27 @@
+import * as actions from "../Constants/categoryConstants";
+
 const initialState = {
-  categories: ["Technics", "Food", "Travel"]
+  categories: []
 };
 
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_CATEGORY":
+    case actions.LOAD_CATEGORIES:
+      return { ...state, categories: action.payload };
+    case actions.ADD_CATEGORY:
       return { ...state, categories: state.categories.concat(action.payload) };
-    case "DELETE_CATEGORY":
+    case actions.DELETE_CATEGORY:
       return {
         ...state,
         categories: state.categories.filter(
-          category => state.categories.indexOf(category) !== action.index
+          category => category.id !== action.id
         )
       };
-    case "UPDATE_CATEGORY":
+    case actions.UPDATE_CATEGORY:
       return {
         ...state,
         categories: state.categories.map(category =>
-          state.categories.indexOf(category) === action.index
-            ? action.payload
-            : category
+          category.id === action.id ? action.payload : category
         )
       };
     default:
