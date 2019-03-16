@@ -79,14 +79,6 @@ export const updateArticle = (
   category,
   id
 ) => dispatch => {
-  console.log('image:',image,'title:',
-    title,"2",
-    previewText,"3",
-    postText,"4",
-    author,"5",
-    postDate,"6",
-    category,"7",
-    id);
   axios
     .put(`${articlesAPI}${id}`, {
       image,

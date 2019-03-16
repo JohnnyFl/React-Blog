@@ -183,7 +183,7 @@ class AddArticle extends Component {
               }
             >
               {categories.map(category => (
-                <MenuItem key={category} value={`${category.name}`}>
+                <MenuItem key={`${category.title}${category.id}`} value={category.name}>
                   {category.name}
                 </MenuItem>
               ))}
